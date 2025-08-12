@@ -26,10 +26,4 @@ It supports creating, reading, updating, and deleting blog posts — all data is
 
 ---
 
-## Installation
-
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+ 

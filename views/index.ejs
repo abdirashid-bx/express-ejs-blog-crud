@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <%- include("./Header") %>
+      <div class="hero">
+        <h1 class="header">What If You Could Grow a Little Every Day?</h1>
+        <p class="thep">Explore a curated collection of articles, insights, and ideas designed to help you learn, grow,
+          and succeed. Whether you're looking for practical tips or thought-provoking essays, our content is crafted to
+          spark curiosity and fuel your personal and professional journey.</p>
+        <button class="btn">Get Started</button>
+      </div>
+      <div class="cardcontainer">
+        
+        
+   <% if (locals.thewholdata) { %>
+  <% thewholdata.forEach((c, index) => { %>
+    <div class="card" method="post" 
+    
+    >
+      <h1 class="h12"><%= c.Title %></h1>
+      <p class="cardp"><%= c.Description %></p>
+     
+
+      <div class="two">
+<form action="/update" method="post">
+    <input type="hidden" name="idtask" value="<%= c.idtask %>">
+    <button type="submit" class="btn">Updates</button>
+</form>
+
+
+
+
+       <form
+        action="/posts/<%= c.idtask %>?_method=DELETE" 
+        method="POST">
+     <button
+       type="submit"
+       class="btn" style="background-color: red;">Delete</button>
+      </form>
+      </div>
+
+ 
+   
+ 
+  </div>
+  <% }) %>
+<% } else { %>
+    <div class="card">
+        <p>Nothing here</p>
+    </div>
+ 
+<% } %>
+               
+      </div>
+  </div>
+</body>
+
+</html>

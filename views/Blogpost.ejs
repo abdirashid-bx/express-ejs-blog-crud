@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <%- include("./Header") %>
+    <div class="box">
+     <form 
+     class="bo" 
+    method="post"
+     action="/Post">
+     <input type="text" placeholder="Post title" class="input" name="Title" required>
+     <textarea name="Description" id="" placeholder="Post Description" class="textare" required></textarea>
+         <button
+          type="submit"
+          class="btn" style="font-size: 15px;">Publish</button>
+     </form>
+    </div>
+     
+</body>
+</html>

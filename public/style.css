@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff5e2; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.header {
+    color: #002C66;
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+ul {
+    display: flex; 
+    gap: 10px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #141311;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 40vh;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 20px; /* add horizontal padding so text doesn't touch edges on small screens */
+}
+
+.thep {
+    font-size: 16px;
+    max-width: 900px;
+}
+
+.btn {
+    background-color: #002C66;
+    padding: 14px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #06336e;
+}
+
+.cardcontainer {
+     display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 10px;
+    align-items: stretch;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-left: 15px;
+    height: fit-content;
+}
+
+.h12 {
+    font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #141311;
+}
+
+.cardp {
+    font-size: 16px;
+    color: #333;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bo {
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: fit-content;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 0 auto;
+
+}
+.two{
+    display: flex;
+    gap: 10px;
+}
+.input, .textare {
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.input {
+    margin-top: 20px;
+    height: 40px;
+}
+
+.textare {
+    height: 300px;
+}
+
+.b {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .cardcontainer {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+    .thep {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .bo {
+        width: 90%;
+    }
+}

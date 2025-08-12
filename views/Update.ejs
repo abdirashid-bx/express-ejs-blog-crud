@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <%- include("./Header") %>
+    <div class="box">
+    
+    
+    <% if (locals.Title && locals.Description) { %>
+  <form 
+     class="bo" 
+    method="post"
+     action="/Update/<%= idtask %>?_method=PATCH" 
+     >
+
+     <input type="hidden" name="idtask" value="<%= idtask %>">
+  <input 
+    type="text" 
+    placeholder="Post title" 
+    class="input" 
+    name="Title" 
+    required 
+    value="<%= Title %>"
+  >
+  <textarea 
+    name="Description" 
+    placeholder="Post Description" 
+    class="textare" 
+    required
+  ><%=Description %></textarea>
+  <button
+          type="submit"
+          class="btn" style="font-size: 15px;">Update</button>
+     </form>
+<% } else { %>
+  <input type="text" placeholder="Post title" class="input" name="Title" required>
+  <textarea name="Description" placeholder="Post Description" class="textare" required></textarea>
+<% } %>
+
+          
+   
+    </div>
+     
+</body>
+</html>
